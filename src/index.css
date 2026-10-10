@@ -1,0 +1,171 @@
+/* ================================================
+   DESIGN FOUNDATION — ItzFizz Digital
+   ================================================
+   Global design tokens, CSS reset, and base
+   typography. Every component draws from these
+   variables — change a value here and it
+   propagates everywhere.
+   ================================================ */
+
+/* ----- CSS Reset ----- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- Design Tokens ----- */
+:root {
+  /* ---- Color: Light Theme (Default) ---- */
+  --color-bg:            #f4f4f2;   /* warm off-white, premium paper feel */
+  --color-bg-elevated:   #ffffff;   
+  --color-bg-subtle:     #eaeae8;   
+  --color-text-primary:  #111111;   
+  --color-text-secondary:#555555;   
+  --color-text-tertiary: #888888;   
+  --color-border:        #dbdbd9;   
+  --color-border-strong: #c0c0be;   
+  --color-accent:        #333333;   
+  --color-accent-muted:  #777777;   
+  
+  --color-white:         #ffffff;   
+  --color-black:         #000000;   
+}
+
+[data-theme="dark"] {
+  /* ---- Color: Dark Theme ---- */
+  --color-bg:            #0e0e0e;   
+  --color-bg-elevated:   #141414;   
+  --color-bg-subtle:     #1a1a1a;   
+  --color-text-primary:  #e8e8e8;   
+  --color-text-secondary:#a0a0a0;   
+  --color-text-tertiary: #606060;   
+  --color-border:        #1f1f1f;   
+  --color-border-strong: #2a2a2a;   
+  --color-accent:        #d4d4d4;   
+  --color-accent-muted:  #8a8a8a;   
+  
+  --color-white:         #f0f0f0;   
+  --color-black:         #0e0e0e;   
+}
+
+/* Base root properties continued */
+:root {
+
+  /* ---- Typography ---- */
+  --font-primary: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --font-weight-light:    300;
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+  --font-weight-extrabold:800;
+
+  /* ---- Spacing Scale ---- */
+  --space-2xs: 0.125rem;  /*   2px */
+  --space-xs:  0.25rem;   /*   4px */
+  --space-sm:  0.5rem;    /*   8px */
+  --space-md:  1rem;      /*  16px */
+  --space-lg:  1.5rem;    /*  24px */
+  --space-xl:  2rem;      /*  32px */
+  --space-2xl: 3rem;      /*  48px */
+  --space-3xl: 4rem;      /*  64px */
+  --space-4xl: 6rem;      /*  96px */
+  --space-5xl: 8rem;      /* 128px */
+
+  /* ---- Border Radius ---- */
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-full: 9999px;  /* pill shape */
+
+  /* ---- Layout ---- */
+  --max-width: 1400px;
+  --content-padding: 2rem;
+
+  /* ---- Transitions ---- */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 600ms ease;
+}
+
+/* ----- Base Styles ----- */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ----- Root Container ----- */
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ----- Typography Base ----- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: var(--font-primary);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ----- Selection ----- */
+::selection {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg);
+}
+
+/* ----- Accessibility: Reduced Motion ----- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
