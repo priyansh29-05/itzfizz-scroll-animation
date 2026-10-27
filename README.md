@@ -1,16 +1,58 @@
-# React + Vite
+# ItzFizz — 3D Scroll Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An experimental, scroll-driven landing page exploring how 3D graphics and motion can make a web experience feel more immersive.
 
-Currently, two official plugins are available:
+**Live demo:** https://priyansh29-05.github.io/itzfizz-scroll-animation/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Highlights
 
-## React Compiler
+- Interactive 3D metallic torus-knot visual
+- Scroll-linked camera and scene movement
+- Depth-of-field effects for visual depth
+- Responsive layout and supporting capability sections
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Three.js
+- React Three Fiber
+- @react-three/drei
+- CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run Locally
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Setup
+
+```bash
+git clone https://github.com/priyansh29-05/itzfizz-scroll-animation.git
+cd itzfizz-scroll-animation
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite, usually http://localhost:5173.
+
+To create a production build:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project Notes
+
+This project focuses on the visual and interaction side of frontend development, including real-time 3D rendering and scroll-based motion. Performance can vary by device and browser because the scene uses WebGL.
+
+## Author
+
+**Priyansh Soni**
+
+- Portfolio: https://priyansh-soni-portfolio.netlify.app
+- GitHub: https://github.com/priyansh29-05
+- LinkedIn: https://www.linkedin.com/in/priyansh-soni-489617211/
